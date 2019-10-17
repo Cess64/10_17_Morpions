@@ -1,0 +1,38 @@
+########################################################################################################################################################
+###################                                    ###################### Je voudrais pas trop te faire peur... le morpion est fonction- ###########
+###################     MORPION en Ruby, by Cess64     ###################### el, mais je suis partie en mode "god", i.e. sans les infos la- ###########
+###################                                    ###################### chées par Félix, du coup, c'est pas beau...et il n'y a que 2 class.#######
+########################################################################################################################################################
+
+Voila ma première soluce d'affichage :             ============>>>          et il en a donc découlé ça :                                                          
+
+puts "               ___ ___ ___ "                                        puts "               ___ ___ ___ "    
+puts "              |   |   |   |"                                        puts "              |   |   |   |"
+puts "              | O | X | O |"                                        puts "              | #{A1} | #{A2} | #{A3} |"          
+puts "              |___|___|___|"                                        puts "              |___|___|___|"    
+puts "              |   |   |   |"                                        puts "              |   |   |   |"     
+puts "              | X | O | X |"                                        puts "              | #{B1} | #{B2} | #{B3} |"  
+puts "              |___|___|___|"                                        puts "              |___|___|___|"  
+puts "              |   |   |   |"                                        puts "              |   |   |   |"     
+puts "              | O | X | O |"                                        puts "              | #{C1} | #{C2} | #{C3} |"    
+puts "              |___|___|___|"                                        puts "              |___|___|___|"        
+
+
+J'ai simplement assigné physiquement au centre de chaque "case" une variable, qui pourra prendre la valeur que je lui donnerai...J'ai conçu la suite à partir de ça ! 
+     
+J'ai crée une class player, pour pouvoir leur assigner un nom et un symbole.
+
+J'ai crée une class game dans lequel tout le reste se passe. J'ai des méthodes pour : - initialiser le jeu                               (initialize)
+                                                                                      - un affichage qui rapelle les règles du jeu       (rules)
+                                                                                      - un affichage du "current_board"                  (visual_game)
+                                                                                      - un affichage du menu                             (menu)
+                                                                                      - une vérif de la saisie du joueur                 (user_check)
+                                                                                      - un Fn qui met à jour le plateau en fn du choix   (menu_choice)
+
+Mon app.rb est assez blindé en affichage, mais aussi en opérations... certaines choses comme le "is_still_going?" pour vérifier qu'aucun des joueurs n'ai
+déjà gagné la partie ne fonctionnait pas... du coup j'ai trouvé d'autres soluces, mais dans le app......
+
+Ensuite j'ai fait une boucle, qui s'arrête quand un joueur à gagné, ou juste avant le 9ème coup si celui-ci ne peut pas donner de gagnant.
+
+
+										POUR LE LANCER, bundle install et >ruby app.rb, Avec tout mon Humour, Cess64.
